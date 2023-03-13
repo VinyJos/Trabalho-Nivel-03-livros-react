@@ -15,7 +15,7 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Catalago</Link>
+                <Link className="nav-link" to="/home">Catalago</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/dados">Novo</Link>
@@ -24,13 +24,14 @@ function App() {
           </div>
         </nav>
         <Routes>
-          <Route path="/" element={<LivroLista livros={controleLivros.obterLivros()} />} />
-          <Route path="/dados" element={<LivroDados />} />
+          <Route path="/home" element={<LivroLista livros={controleLivros.obterLivros()} />} />
+          <Route path="/dados" element={<LivroDados/>} />
         </Routes>
       </div>
     </BrowserRouter>
   );
 }
+
 
 export default App;
 

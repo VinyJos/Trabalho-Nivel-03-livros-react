@@ -24,7 +24,7 @@ const livros: Array<Livro> = [
     }
 ]
 
-class ControleLivro {
+export default class ControleLivro {
     
     obterLivros (): Array<Livro>{
         return livros;
@@ -45,5 +45,3 @@ class ControleLivro {
         }
     }
 }
-
-export default ControleLivro;
