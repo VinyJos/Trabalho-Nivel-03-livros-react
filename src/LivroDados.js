@@ -4,7 +4,7 @@ import ControleLivros from "./controle/ControleLivros";
 import ControleEditora from "./controle/ControleEditora";
 
 export default function LivroDados() {
-  const controleLivro = new ControleLivros();
+  const controleLivros = new ControleLivros();
   const controleEditora = new ControleEditora();
   const opcoes = controleEditora.getEditoras().map((editora) => ({
     value: editora.codEditora,
@@ -31,7 +31,7 @@ export default function LivroDados() {
       autores: autores.split('\n'),
       codEditora
     };
-    controleLivro.incluir(livro);
+    controleLivros.incluir(livro);
     navigate('/');
   };
   
